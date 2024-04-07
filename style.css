@@ -1,0 +1,208 @@
+/* Reset */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    background-color: black;
+    color: white;
+}
+
+/* Button */
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 90vh;
+}
+
+.button {
+    padding: 2%;
+    border: 3px solid blue;
+    font-size: xx-large;
+    background-color: black;
+    color: blue;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.happy {
+    text-align: center;
+    margin-top: 35vh;
+    font-size: 300%;
+    font-family: "Ojuju", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    text-shadow: #FC0 1px 0 10px;
+}
+
+.container {
+    width: 90vw;
+    height: 95vh;
+    margin-top: 2%;
+    margin-bottom: 14%;
+    border: solid black;
+    line-height: 0.1;
+    background-color: rgba(0, 0, 255, 0.088);
+    border: 1px solid rgb(0, 0, 255);
+    box-shadow: 0px 20px 40px 2px rgb(6, 32, 231);
+    position: relative;
+}
+
+.avi {
+    font-size: 200%;
+    text-shadow: #FC0 5px 0 10px;
+}
+
+.a, .v, .i, .image {
+    position: absolute;
+    animation-fill-mode: forwards;
+}
+
+.a {
+    animation-name: a;
+    animation-duration: 5s;
+}
+
+.v {
+    animation-name: v;
+    animation-duration: 5s;
+}
+
+.i {
+    animation-name: i;
+    animation-duration: 5s;
+}
+
+.image {
+    width: 10%;
+    animation-name: b-image;
+    animation-duration: 5s;
+}
+
+/* Animation */
+@keyframes a {
+    from {
+        top: 0;
+        left: 0;
+    }
+    to {
+        top: 50%;
+        left: 45%;
+    }
+}
+
+@keyframes v {
+    from {
+        top: 0;
+        left: 50%;
+    }
+    to {
+        top: 50%;
+        left: 50%;
+    }
+}
+
+@keyframes i {
+    from {
+        top: 0;
+        left: 100%;
+    }
+    to {
+        top: 50%;
+        left: 55%;
+    }
+}
+
+@keyframes b-image {
+    from {
+        bottom: 0;
+        left: 45%;
+    }
+    to {
+        bottom: 20%;
+        left: 45%;
+    }
+}
+
+/* Background video */
+.video-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -1;
+}
+
+video {
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Responsiveness */
+@media screen and (max-width: 500px) {
+    .image {
+        width: 40%;
+    }
+
+    @keyframes a {
+        from {
+            top: 0;
+            left: 0;
+        }
+        to {
+            top: 50%;
+            left: 33%;
+        }
+    }
+
+    @keyframes v {
+        from {
+            top: 0;
+            left: 48%;
+        }
+        to {
+            top: 50%;
+            left: 48%;
+        }
+    }
+
+    @keyframes i {
+        from {
+            top: 0;
+            left: 100%;
+        }
+        to {
+            top: 50%;
+            left: 63%;
+        }
+    }
+
+    @keyframes b-image {
+        from {
+            bottom: 0;
+            left: 34%;
+        }
+        to {
+            bottom: 20%;
+            left: 34%;
+        }
+    }
+}

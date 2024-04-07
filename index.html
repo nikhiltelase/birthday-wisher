@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avi</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ojuju:wght@200..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <!-- ---play button-- -->
+        <div class="button-container" id="button">
+            <button id="playButton" class="button">Birthday Surprise!</button>
+        </div>
+        <div>
+        <!-- ---text&animation--- -->
+            <header class="header" id="message" style="display: none;">
+                <div class="container">
+                    <h1 class="happy">Happy Birtday</h1>
+                    <div class="avi">
+                        <h1 class="a">A</h1>
+                        <h1 class="v">V</h1>
+                        <h1 class="i">I</h1>
+                        <img src="cake.png" class="image" alt="">
+                    </div>
+                    
+                </div>
+            </header>
+        </div>
+        <!-- --video-- -->
+        <div class="video-container" id="video" style="display: none;">
+            <video src="background.mp4" muted autoplay ></video>
+        </div>
+        <!-- --audio-- -->
+        <audio src="Happy Birthday Avi - 1.wav" 
+               id="audio"
+               controls
+               style="display: none;">
+        </audio>
+        <!-- ---script--- -->
+       <script>
+           document.getElementById('playButton').addEventListener('click', function() {
+               var audio = document.getElementById('audio');
+               audio.play();
+               document.getElementById('message').style.display = 'flex';
+               document.getElementById('video').style.display = 'block';
+               document.getElementById('button').style.display = 'none';
+           });
+       </script>
+    </main>
+</body>
+</html>
