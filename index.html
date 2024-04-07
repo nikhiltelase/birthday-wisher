@@ -25,18 +25,18 @@
                         <h1 class="a">A</h1>
                         <h1 class="v">V</h1>
                         <h1 class="i">I</h1>
-                        <img src="cake.png" class="image" alt="">
+                        <img src="media/cake.png" class="image" alt="">
                     </div>
                     
                 </div>
             </header>
         </div>
         <!-- --video-- -->
-        <div class="video-container" id="video" style="display: none;">
-            <video src="background.mp4" muted autoplay ></video>
+        <div class="background-container" id="backgound" style="display: none;">
+            <img src="media/backgound.gif" alt="" class="gif">
         </div>
         <!-- --audio-- -->
-        <audio src="Happy Birthday Avi - 1.wav" 
+        <audio src="media/Happy Birthday Avi - 1.wav" 
                id="audio"
                controls
                style="display: none;">
@@ -47,7 +47,7 @@
                var audio = document.getElementById('audio');
                audio.play();
                document.getElementById('message').style.display = 'flex';
-               document.getElementById('video').style.display = 'block';
+               document.getElementById('backgound').style.display = 'block';
                document.getElementById('button').style.display = 'none';
            });
        </script>
